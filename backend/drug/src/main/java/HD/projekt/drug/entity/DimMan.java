@@ -1,15 +1,16 @@
 package HD.projekt.drug.entity;
 
 import jakarta.persistence.*;
+@Entity
+@Table(name = "DimMan", schema = "dbo")
 
-@Table(name = "DimMan")
 public class DimMan {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "dimName")
     private String dimName;

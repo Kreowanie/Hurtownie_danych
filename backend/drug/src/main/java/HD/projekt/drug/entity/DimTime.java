@@ -4,14 +4,16 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+
 @Entity
-@Table(name = "DimTime")
+@Table(name = "DimTime", schema = "dbo")
+
 public class DimTime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "timeDay", nullable = false)
     private LocalDate timeDay;

@@ -2,16 +2,16 @@ package HD.projekt.drug.entity;
 
 import jakarta.persistence.*;
 
-@Table(name = "FactDrug")
-
+@Entity
+@Table(name = "FactDrug", schema = "dbo")
 public class FactDrug {
 
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "dimTime_id")
     private int dimTime_id;
